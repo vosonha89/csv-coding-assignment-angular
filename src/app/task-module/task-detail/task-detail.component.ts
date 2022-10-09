@@ -10,7 +10,6 @@ import { TasksRouting } from '../task-module.route.values';
     styleUrls: ['./task-detail.component.css']
 })
 export class TaskDetailComponent implements OnInit {
-    public routeTrack?: Subscription;
     public task?: Task;
     public users?: User[];
     public message = '';
@@ -25,18 +24,13 @@ export class TaskDetailComponent implements OnInit {
         const me = this;
         me.message = '';
         me.updateSuccessed = false;
-        me.routeTrack = me.route.params.subscribe(async params => {
+        me.route.params.subscribe(async params => {
             const id = params['id'] as number;
             if (id) {
                 me.task = await me.backendService.task(id).toPromise();
             }
         });
         me.users = await me.backendService.users().toPromise()
-    }
-
-    public ngOnDestroy(): void {
-        const me = this;
-        me.routeTrack.unsubscribe();
     }
 
     public async save(): Promise<void> {
