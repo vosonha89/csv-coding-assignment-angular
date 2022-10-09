@@ -1,0 +1,51 @@
+.desktop-bar .menu-bar {
+    min-width: 250px;
+}
+
+    .desktop-bar .menu-bar .menu-item {
+        border: 2px solid rgba(15, 37, 54, 0.025);
+        margin-bottom: 4px;
+        -moz-border-radius: 4px;
+        -webkit-border-radius: 4px;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+        .desktop-bar .menu-bar .menu-item span {
+            color: #0F2536;
+        }
+
+        .desktop-bar .menu-bar .menu-item:hover {
+            border: 2px solid rgba(15, 37, 54, 0.05);
+        }
+
+        .desktop-bar .menu-bar .menu-item.active {
+            border: 2px solid rgba(15, 37, 54, 1);
+        }
+
+.mobile-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+
+    .mobile-bar .menu-bar .menu-item {
+        border: 1px solid rgba(15, 37, 54, 0.025);
+        -moz-border-radius: 4px;
+        -webkit-border-radius: 4px;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+        .mobile-bar .menu-bar .menu-item span {
+            color: #0F2536;
+            font-size: 0.65rem;
+        }
+
+        .mobile-bar .menu-bar .menu-item:hover {
+            border: 1px solid rgba(15, 37, 54, 0.05);
+        }
+
+        .mobile-bar .menu-bar .menu-item.active {
+            border: 1px solid rgba(15, 37, 54, 1);
+        }

@@ -1,0 +1,13 @@
+/* You can add global styles to this file, and also import other style files */
+html,
+body {
+    height: 100%;
+}
+
+a {
+    cursor: pointer !important;
+}
+
+.mw-100 {
+    min-width: 100px;
+}
